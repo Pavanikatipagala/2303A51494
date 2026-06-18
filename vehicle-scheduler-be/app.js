@@ -1,7 +1,9 @@
 const express = require("express");
 
 const app = express();
+const scheduleRoutes = require("./routes/scheduleRoutes");
 
+app.use("/schedule", scheduleRoutes);
 app.use(express.json());
 
 app.get("/", (req, res) => {
